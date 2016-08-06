@@ -1,0 +1,23 @@
+<p>
+  <strong>Title:</strong>
+  <%= @game.title %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @game.state %>
+</p>
+
+<p>
+  <strong>Turn:</strong>
+  <%= @game.turn %>
+</p>
+
+<h2>Decks</h2>
+<%= render @game.decks %>
+
+<h2>Add a deck:</h2>
+<%= render 'decks/form' %>
+
+<%= link_to 'Edit', edit_game_path(@game) %>
+<%= link_to 'Back', games_path %>

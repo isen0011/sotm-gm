@@ -1,0 +1,15 @@
+<%= form_for([@game,@game.decks.build]) do |f| %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  
+  <p>
+    <%= f.label :team %><br />
+    <%= f.text_field :team %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
