@@ -12,6 +12,14 @@
   <strong>Turn:</strong>
   <%= @game.turn %>
 </p>
+<p>
+	<textarea id="bbcode" name="bbcode" style="width:600px; height:300px;">
+	<%= @game.bbcode.html_safe %>
+	</textarea>
+</p>
+<p>
+	<%= @game.modbb.bbcode_to_html.html_safe %>
+</p>
 
 <h2>Decks</h2>
 <%= render @game.decks %>
