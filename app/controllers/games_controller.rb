@@ -1,4 +1,9 @@
+
+
 class GamesController < ApplicationController
+  
+  String.include CoreExtensions::String::BBCodeTranslate    
+  
   def index
     @games = Game.all
   end
