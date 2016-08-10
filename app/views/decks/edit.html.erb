@@ -1,0 +1,58 @@
+<h1>Editing deck</h1>
+
+  <%= form_for :deck, url: game_deck_path(@deck.game,@deck), :method => :patch do |f|%>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  
+  <p>
+    <%= f.label :team %>
+    <%= f.select :team, ['Hero','Villian','Environment']%>
+  </p>
+
+  <p>
+    <%= f.label :imageid %>
+    <%= f.text_field :imageid %>
+  </p>
+
+  <p>
+    <%= f.label :player %>
+    <%= f.text_field :player %>
+  </p>
+  
+    <p>
+    <%= f.label :variants %>
+    <%= f.text_field :variants %>
+  </p>
+    <p>
+    <%= f.label :hp %>
+    <%= f.text_field :hp %>
+  </p>
+    <p>
+    <%= f.label :maxhp %>
+    <%= f.text_field :maxhp %>
+  </p>
+    <p>
+    <%= f.label :cards_in_deck %>
+    <%= f.text_field :cards_in_deck %>
+  </p>
+    <p>
+    <%= f.label :cards_in_trash %>
+    <%= f.text_field :cards_in_trash %>
+  </p>
+    <p>
+    <%= f.label :cards_in_hand %>
+    <%= f.text_field :cards_in_hand %>
+  </p>
+    <p>
+    <%= f.label :cards_in_play %>
+    <%= f.text_field :cards_in_play%>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
+
+<%= link_to 'Back', game_path(@deck.game) %>

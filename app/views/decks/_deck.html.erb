@@ -9,5 +9,9 @@
 </p>
 
 <p>
+  <%= deck.bbcode.bbcode_translate.html_safe%>
+</p>
+<p>
+  <%= link_to 'Edit Deck', edit_game_deck_path(deck.game,deck) %>
   <%= link_to 'Destroy Deck', [deck.game, deck], method: :delete, data: { confirm: 'Are you sure?' } %>
 </p>

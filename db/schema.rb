@@ -10,14 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160805194124) do
+ActiveRecord::Schema.define(version: 20160808171233) do
 
   create_table "decks", force: :cascade do |t|
     t.string   "title"
     t.string   "team"
     t.integer  "game_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "imageid"
+    t.string   "player"
+    t.string   "variants"
+    t.integer  "hp"
+    t.integer  "maxhp"
+    t.integer  "cards_in_deck"
+    t.integer  "cards_in_trash"
+    t.integer  "cards_in_hand"
+    t.integer  "cards_in_play"
     t.index ["game_id"], name: "index_decks_on_game_id"
   end
 
